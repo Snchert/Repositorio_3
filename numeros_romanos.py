@@ -1,15 +1,32 @@
-def primer_digito():
+def conertor(num):
+    if type(num) != int or num <= 0:
+        return "ingrese un numero entero (positivo)"
+    if num > 3999:
+        return "Solo se pueden ingresar números hasta 3999."
 
-    return 1+1
+    valores = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
+    simbolos = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"]
+    resultado = ""
+    i = 0
+    while num > 0:
+        if num >= valores[i]:
+            resultado += simbolos[i]
+            num -= valores[i]
+        else:
+            i += 1
+    return resultado
 
-Numero_ingresado = input('Ingresa el numero romano: ') 
-lista = [Numero_ingresado]
-letras_tupla =tuple(lista)
-conta =1
-while(conta < len(Numero_ingresado)):
-    
-    if():
-        p= 1
+def numero_entero():
+    while True:
+        try:
+            numero = int(input("Ingresa un número entero (hasta 3999): "))
+            return numero
+        except ValueError:
+            print("No se puede convertir lo que ingresaste")
 
+if __name__ == "__main__":
+    numeroara = numero_entero()
+    numeroro = conertor(numeroara)
+    print(f"Resultado: {numeroro}")
 
         
