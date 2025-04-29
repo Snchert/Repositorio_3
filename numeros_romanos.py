@@ -17,12 +17,11 @@ def conertor(num):
     return resultado
 
 def numero_entero():
-    while True:
-        try:
-            numero = int(input("Ingresa un número entero (hasta 3999): "))
-            return numero
-        except ValueError:
-            print("No se puede convertir lo que ingresaste")
+    try:
+        numero = int(input("Ingresa un número entero (hasta 3999): "))
+        return numero
+    except ValueError:
+        print("No se puede convertir lo que ingresaste")
 
 if __name__ == "__main__":
     numeroara = numero_entero()
